@@ -6,17 +6,25 @@ import { AppContext } from "../Context/appContext.jsx";
 import { FcGoogle } from "react-icons/fc";
 
 const Signup = () => {
-  const { user } = useContext(AppContext);
+  const { user,setLoginData ,loginData} = useContext(AppContext);
   const navigate = useNavigate();
 
   const handleGoogleLogin = async () => {
     try {
-      await signInWithPopup(auth, googleProvider);
+      const result = await signInWithPopup(auth, googleProvider);
+      const user = result.user;
+      setLoginData(result.result.displayName); 
+      console.log("user : - ",result.result.displayName
+      );
+      
+      
       navigate("/profile"); // Redirect to Editor after successful login
     } catch (error) {
       console.error("Error during Google Login:", error);
     }
   };
+
+  console.log("signup : ",loginData);
 
   if (user) {
     navigate("/profile"); // Redirect if already logged in

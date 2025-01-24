@@ -7,6 +7,10 @@ export const AppContext = createContext();
 export const AppProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [loginData,setLoginData] = useState("");
+
+       const [isExpand, setIsExpand] = useState(true);
+  
 
 
   useEffect(() => {
@@ -20,7 +24,7 @@ export const AppProvider = ({ children }) => {
    if (loading) return <p>Loading...</p>;
 
   return (
-    <AppContext.Provider value={{ user, setUser }}>
+    <AppContext.Provider value={{ user, setUser,isExpand,setIsExpand,setLoginData,loginData }}>
       {children}
     </AppContext.Provider>
   );

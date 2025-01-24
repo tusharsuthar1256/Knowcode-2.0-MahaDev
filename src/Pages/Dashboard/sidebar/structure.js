@@ -208,8 +208,15 @@
 //        ]
 //      }
 //    ];
-   
 //    export { sidebarStructure };
+
+
+
+import { FaRegNewspaper, FaRegUser, FaRegUserCircle } from "react-icons/fa";
+import { FaBuildingNgo } from "react-icons/fa6";
+import { MdOutlineEqualizer, MdOutlineQuiz } from "react-icons/md";
+
+   
    
 
    const sidebarStructure = [
@@ -217,31 +224,31 @@
           id: "profile",
           title:"Profile",
           link: "/profile",
-          icon: "profile",
+          icon: <FaRegUserCircle />
      },
      {
           id:"quizTest",
           title:"Quiz Test",
           link: "/quiz-test",
-          icon: "quiz",
+          icon: <MdOutlineEqualizer />,
      },
      {
           id:"news",
           title:"News",
           link: "/news",
-          icon: "news",
+          icon: <FaRegNewspaper />,
      },
      {
           id:"community",
           title:"Community",
           link: "/community",
-          icon: "community",
+          icon: <RiUserCommunityLine />,
      },
      {
           id:"ngo",
           title:"NGO",
           link: "/ngo",
-          icon: "ngo",
+          icon: <FaBuildingNgo />,
      }
    ];
 
