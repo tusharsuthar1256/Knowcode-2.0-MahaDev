@@ -2,7 +2,7 @@
 import { useContext, useState } from "react";
 import SimpleBar from "simplebar-react";
 import "simplebar-react/dist/simplebar.min.css";
-import { MdOutlineQuiz, MdOutlineSpaceDashboard } from "react-icons/md";
+import { MdEventNote, MdOutlineQuiz, MdOutlineSpaceDashboard } from "react-icons/md";
 import { RiUserCommunityLine } from "react-icons/ri";
 import { Link } from "react-router-dom";
 import { AppContext } from "../../../Context/appContext";
@@ -18,7 +18,7 @@ const Sidebar = ({ onclick }) => {
 
   const toggleSidebar = () => {
     setIsExpand(!isExpand);
-    setExpand(!isExpand);
+    setIsExpand(!isExpand);
   };
 
   // Auto expand the sidebar when hovered
@@ -102,6 +102,7 @@ const Sidebar = ({ onclick }) => {
                 { id: "profile", icon: <MdOutlineSpaceDashboard />, label: "Profile" ,link:"/dashboard/profile"},
                 { id: "quiz", icon: <MdOutlineQuiz />, label: "Quiz-Learning" ,link:"/quiz-test"},
                 { id: "community", icon: <RiUserCommunityLine />, label: "Community" ,link:"/dashboard/community"},
+                { id: "event", icon: <MdEventNote />, label: "Events" ,link:"/events"},
               ].map((item) => (
                 <li key={item.id}>
                   <Link to={item.link}

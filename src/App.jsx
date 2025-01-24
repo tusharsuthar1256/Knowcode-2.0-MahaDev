@@ -18,6 +18,7 @@ import ModuleOne from "./Pages/Dashboard/Module1/Module1.jsx";
 import Profile from "./Pages/Dashboard/Profile/profile.jsx";
 import ModuleTwo from "./Pages/Dashboard/Module1/Module2.jsx";
 import ModuleThree from "./Pages/Dashboard/Module1/Module3.jsx";
+import Events from "./Pages/Dashboard/Events/events.jsx";
 
 function App() {
   const location = useLocation();
@@ -52,6 +53,7 @@ function App() {
             <Route path="profile" element={<Profile />} />
           </Route>
         </Route>
+            <Route path="/events" element={<Events/>} />
             <Route path="/quiz-test" element={<QuizLearning />}/>
               <Route path="/module-one" element={<ModuleOne />} />
               <Route path="/module-two" element={<ModuleTwo />} />
