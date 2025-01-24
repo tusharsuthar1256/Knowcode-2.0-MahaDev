@@ -6,7 +6,7 @@ const PublicRoute = () => {
   const { user } = useContext(AppContext);
 
   // Redirect to Editor if the user is already logged in
-  return user ? <Navigate to="/profile" /> : <Outlet />;
+  return user ? <Navigate to="/dashboard" /> : <Outlet />;
 };
 
 export default PublicRoute;
