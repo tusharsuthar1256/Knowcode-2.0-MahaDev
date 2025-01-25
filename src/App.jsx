@@ -19,6 +19,7 @@ import Profile from "./Pages/Dashboard/Profile/profile.jsx";
 import ModuleTwo from "./Pages/Dashboard/Module1/Module2.jsx";
 import ModuleThree from "./Pages/Dashboard/Module1/Module3.jsx";
 import Events from "./Pages/Dashboard/Events/events.jsx";
+import Community from "./Pages/Dashboard/community/community.jsx";
 
 function App() {
   const location = useLocation();
@@ -52,6 +53,7 @@ function App() {
           <Route path="/dashboard" element={<Dashboard />}>
             <Route path="profile" element={<Profile />} />
           </Route>
+            <Route path="community" element={<Community />} />
         </Route>
             <Route path="/events" element={<Events/>} />
             <Route path="/quiz-test" element={<QuizLearning />}/>

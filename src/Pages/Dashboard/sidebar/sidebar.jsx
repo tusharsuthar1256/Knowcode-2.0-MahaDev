@@ -33,7 +33,7 @@ const Sidebar = ({ onclick }) => {
       role="navigation"
       className={[
         "bg-slate-50 border-r border-slate-100 shadow-sm absolute inset-y-0 left-0",
-        "duration-300 ease-in-out md:fixed",
+        "duration-300 ease-in-out md:fixed z-",
         isExpand ? "w-72" : "w-20",
       ].join(" ")}
       onMouseEnter={() => handleHover(true)} // Expand when hovering
@@ -101,7 +101,7 @@ const Sidebar = ({ onclick }) => {
               {[
                 { id: "profile", icon: <MdOutlineSpaceDashboard />, label: "Profile" ,link:"/dashboard/profile"},
                 { id: "quiz", icon: <MdOutlineQuiz />, label: "Quiz-Learning" ,link:"/quiz-test"},
-                { id: "community", icon: <RiUserCommunityLine />, label: "Community" ,link:"/dashboard/community"},
+                { id: "community", icon: <RiUserCommunityLine />, label: "Community" ,link:"/community"},
                 { id: "event", icon: <MdEventNote />, label: "Events" ,link:"/events"},
               ].map((item) => (
                 <li key={item.id}>

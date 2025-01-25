@@ -10,24 +10,20 @@ function Nav({onclick}) {
   return (
     <header class="text-gray-600 body-font">
       <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-        <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
-          <span class="ml-3 text-xl">LOGO</span>
-        </a>
-        <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
-          <Link to="/" ss="mr-7 hover:text-gray-900">
+      <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+      <img src="./public/SDGS-1.png" fill="none" stroke="currentColor"  stroke-linejoin="round" stroke-width="4" class="w-16 h-16 text-white p-2  rounded-full" viewBox="0 0 24 24 hover:scale-2"/>
+    
+      <span class="ml-3 text-2xl hover:text-blue-800">GlobalGoalsHub</span>
+    </a>
+        <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center mr-10">
+          <Link to="/" ss=" hover:text-gray-900">
             Home
           </Link>
-          <Link to="/about" class="mr-7 hover:text-gray-900">
-            About
-          </Link>
-          <Link to="/info-activity" class="mr-7 hover:text-gray-900">
-            Info-Activity
-          </Link>
-          <Link to="/contact" class="mr-7 hover:text-gray-900">
-            Contact US
-          </Link>
+          
+          
+    
           {user ? (
-            <Link to="/profile" class="mr-7 hover:text-gray-900">
+            <Link to="/profile" class=" hover:text-gray-900">
               Profile
             </Link>
           ) : null}
